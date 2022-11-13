@@ -16,10 +16,10 @@
     <button class="animate__animated animate__pulse animate__slow 5s animate__infinite" @click="gradeQuiz">Computo Resultum</button>
   </form>
   <div v-else>
-    <p>Your score... {{ score }}</p>
+    <!-- <p>Your score... {{ score }}</p> -->
     <!-- <p>You belong to... {{ multiply(score) }}</p>
     <p>New score? {{ newScore(score) }}</p> -->
-    <p> Yer a ... {{ yourHouse(score) }}</p>
+    <p> Yer a {{ yourHouse(score) }}</p>
     <button id="newattempt" class="animate__animated animate__bounce animate__delay-2s" @click="restart">Try Again?</button>
   </div>
 </template>
@@ -97,9 +97,9 @@ export default {
       yourHouse(gradeQuiz) {
         if (gradeQuiz <= 9) {
           return "GGGRRRYYYFFFIINNNDOOORRRR"
-        } else if (gradeQuiz >=10 || gradeQuiz <= 15) {
+        } else if (gradeQuiz >=10 && gradeQuiz <= 15) {
           return "RRRAAAVENCCLLLLAAAAWWW!"
-        } else if (gradeQuiz >=16 || gradeQuiz <=22) {
+        } else if (gradeQuiz >=16 && gradeQuiz <=22) {
           return "HHHHUUUUFFFLEPUUUUFFFF"
         }else {
           return "SSSLLLYYYYTHERRRIIINNNN"
